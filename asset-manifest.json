@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/morne-venter/static/css/main.e6c13ad2.css",
-    "main.js": "/morne-venter/static/js/main.c50bc4c4.js",
+    "main.js": "/morne-venter/static/js/main.fb35c39a.js",
     "index.html": "/morne-venter/index.html",
     "main.e6c13ad2.css.map": "/morne-venter/static/css/main.e6c13ad2.css.map",
-    "main.c50bc4c4.js.map": "/morne-venter/static/js/main.c50bc4c4.js.map"
+    "main.fb35c39a.js.map": "/morne-venter/static/js/main.fb35c39a.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.c50bc4c4.js"
+    "static/js/main.fb35c39a.js"
   ]
 }
