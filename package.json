@@ -2,7 +2,7 @@
     "name": "my-site",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://morneventer.github.io/morne-venter",
+    "homepage": "https://morneventer.github.io/morne-venter/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
         "react": "^18.2.0",
