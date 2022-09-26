@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Main } from './pages/main';
 import { NoPage } from './pages/noPage';
 
 export const App = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename='/morne-venter'>
 			<Routes>
 				<Route
 					path='/'
