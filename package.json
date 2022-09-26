@@ -1,0 +1,41 @@
+{
+    "name": "my-site",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-jss": "^10.9.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.24.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "react-router-dom": "^6.4.1",
+        "react-scripts": "5.0.1"
+    },
+    "resolutions": {
+        "nth-check": "2.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "prebuild": "npm run scan",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "scan": "npm audit --omit=dev"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

@@ -1,2 +1,3 @@
 # morne-venter
-A personal website for Morné Venter
+
+A personal website for Morné Venter.
