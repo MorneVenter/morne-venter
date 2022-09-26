@@ -8,6 +8,7 @@ export const App = () => {
 			<Routes>
 				<Route
 					path='/'
+					exact
 					element={<Main />}
 				/>
 				<Route
