@@ -5,10 +5,11 @@ export const style = createUseStyles({
 	container: {
 		display: 'flex',
 		flexDirection: 'column',
-		width: '350px',
+		width: '340px',
 		alignItems: 'center',
 		justifyContent: 'center',
 		margin: '15px',
+		marginBottom: '40px',
 	},
 	body: {
 		display: 'flex',
@@ -18,7 +19,7 @@ export const style = createUseStyles({
 		width: '100%',
 	},
 	link: {
-		color: color.accent,
+		color: color.secondary,
 		backgroundColor: color.text,
 		fontWeight: 'bold',
 		textDecoration: 'none',
@@ -33,5 +34,8 @@ export const style = createUseStyles({
 	},
 	bodyText: {
 		marginTop: 0,
+	},
+	headerText: {
+		fontSize: '20px',
 	},
 });

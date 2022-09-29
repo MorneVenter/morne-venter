@@ -12,13 +12,17 @@ export const ProjectCard = ({ headerText, bodyText, link, image }) => {
 	return (
 		<div className={css.container}>
 			<div className={css.body}>
-				<h2>{headerText}</h2>
-				<p
-					className={css.link}
-					onClick={handleLinkClick}
-				>
-					SEE MORE
-				</p>
+				<h2 className={css.headerText}>{headerText}</h2>
+				{link ? (
+					<p
+						className={css.link}
+						onClick={handleLinkClick}
+					>
+						SEE MORE
+					</p>
+				) : (
+					<></>
+				)}
 			</div>
 			<p className={css.bodyText}>{bodyText}</p>
 			<img
