@@ -17,6 +17,7 @@ export const style = createUseStyles({
 		alignItems: 'center',
 		justifyContent: 'space-between',
 		width: '100%',
+		height: '73px',
 	},
 	link: {
 		color: color.secondary,
@@ -29,7 +30,7 @@ export const style = createUseStyles({
 	},
 	image: {
 		borderRadius: '10px',
-		height: '150px',
+		height: '170px',
 		boxShadow: `0 8px 8px 0 rgba(0, 0, 0, 0.25), 0 12px 20px 0 rgba(0, 0, 0, 0.25)`,
 	},
 	bodyText: {
