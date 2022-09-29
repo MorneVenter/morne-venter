@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/morne-venter/static/css/main.e6c13ad2.css",
-    "main.js": "/morne-venter/static/js/main.2b4903d0.js",
+    "main.js": "/morne-venter/static/js/main.4808e7c9.js",
+    "static/media/self.jpg": "/morne-venter/static/media/self.9768a3b30203b6825634.jpg",
+    "static/media/enter_digiton_banner.jpg": "/morne-venter/static/media/enter_digiton_banner.ebb7ac6860f201c51e6d.jpg",
+    "static/media/ember_crusade_banner.jpg": "/morne-venter/static/media/ember_crusade_banner.e918cba8c93937484da0.jpg",
     "static/media/skullo.png": "/morne-venter/static/media/skullo.2a8284fe7f8b2bc5d7a9.png",
-    "static/media/enter_digiton_banner.jpg": "/morne-venter/static/media/enter_digiton_banner.9869aee0307a6cefbc02.jpg",
-    "static/media/ember_crusade_banner.jpg": "/morne-venter/static/media/ember_crusade_banner.c4db9d02a4fc19d78357.jpg",
+    "static/media/unknown.png": "/morne-venter/static/media/unknown.ebbfd655c6a1add552a2.png",
     "index.html": "/morne-venter/index.html",
     "main.e6c13ad2.css.map": "/morne-venter/static/css/main.e6c13ad2.css.map",
-    "main.2b4903d0.js.map": "/morne-venter/static/js/main.2b4903d0.js.map"
+    "main.4808e7c9.js.map": "/morne-venter/static/js/main.4808e7c9.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2b4903d0.js"
+    "static/js/main.4808e7c9.js"
   ]
 }
