@@ -1,6 +1,6 @@
-export const pastelBlonde = {
-	purple: '#887BB0',
-	spearmint: '#85D2D0',
-	roseQuartz: '#F4B9B8',
-	yellow: '#FFF4BD',
+export const color = {
+	text: '#FB004C',
+	accent: '#9CFF9F',
+	primary: '#FDF4F5',
+	secondary: '#E7FF3C',
 };

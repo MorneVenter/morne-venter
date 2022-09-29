@@ -1,5 +1,6 @@
 import React from 'react';
+import { MainModule } from '../modules/mainModule/mainModule';
 
 export const Main = () => {
-	return <div>Main</div>;
+	return <MainModule />;
 };
