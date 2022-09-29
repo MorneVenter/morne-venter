@@ -20,18 +20,21 @@ export const style = createUseStyles({
 		height: '73px',
 	},
 	link: {
-		color: color.secondary,
+		color: color.primary,
 		backgroundColor: color.text,
-		fontWeight: 'bold',
 		textDecoration: 'none',
 		padding: '10px',
 		borderRadius: '15px',
 		cursor: 'pointer',
+		transition: 'transform .2s',
+		'&:hover': {
+			transform: 'scale(1.15)',
+		},
 	},
 	image: {
 		borderRadius: '10px',
 		height: '170px',
-		boxShadow: `0 8px 8px 0 rgba(0, 0, 0, 0.25), 0 12px 20px 0 rgba(0, 0, 0, 0.25)`,
+		boxShadow: `0 8px 8px 0 rgba(0, 0, 0, 0.15), 0 12px 20px 0 rgba(0, 0, 0, 0.15)`,
 	},
 	bodyText: {
 		marginTop: 0,

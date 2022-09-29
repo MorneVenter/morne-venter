@@ -12,7 +12,7 @@ export const ProjectBody = () => {
 			<div className={css.projectColumn}>
 				<h1 className={css.projectHeader}>Current Projects</h1>
 				<ProjectCard
-					headerText='Project X'
+					headerText='TBA'
 					bodyText='currently in development (202X)'
 					image={unknown}
 				/>
