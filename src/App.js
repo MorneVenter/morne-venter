@@ -7,7 +7,7 @@ import { routes } from './routes';
 export const App = () => {
 	return (
 		<ThemeProvider>
-			<BrowserRouter basename='/morne-venter'>
+			<BrowserRouter basename='/'>
 				<Routes>
 					<Route
 						path={routes.main}

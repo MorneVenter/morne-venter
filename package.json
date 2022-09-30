@@ -2,7 +2,7 @@
     "name": "morne-venter",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://morneventer.github.io/morne-venter/",
+    "homepage": "https://morneventer.com/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
         "clsx": "^1.2.1",
