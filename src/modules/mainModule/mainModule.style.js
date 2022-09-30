@@ -3,7 +3,7 @@ import { color } from '../../colors/palette';
 
 export const style = createUseStyles({
 	main: {
-		backgroundColor: color.primary,
+		backgroundColor: (props) => (props.isDarkTheme ? color.primaryDark : color.primary),
 		minWidth: '100%',
 		minHeight: '100%',
 		position: 'absolute',

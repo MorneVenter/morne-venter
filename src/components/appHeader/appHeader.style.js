@@ -4,7 +4,6 @@ import { color } from '../../colors/palette';
 
 export const style = createUseStyles({
 	headerContainer: {
-		backgroundColor: color.primary,
 		width: '50%',
 		minHeight: '100vh',
 		display: 'flex',
@@ -49,5 +48,21 @@ export const style = createUseStyles({
 		'50%': { transform: 'translateY(-60%)' },
 		'75%': { transform: 'translateY(0%)' },
 		'100%': { transform: ':translateY(0%)' },
+	},
+	themeToggleContainer: {
+		width: '100%',
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-around',
+		margin: '5px 0 20px 0',
+	},
+	themeToggle: {
+		cursor: 'pointer',
+		padding: '5px',
+	},
+	activeThemeToggle: {
+		backgroundColor: color.text,
+		color: color.primary,
 	},
 });
