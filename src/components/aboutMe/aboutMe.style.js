@@ -12,7 +12,8 @@ export const style = createUseStyles({
 		},
 	},
 	header: {
-		width: '110px',
+		width: '100%',
+		textAlign: 'center',
 		margin: 'auto auto 20px auto',
 		textTransform: 'uppercase',
 		fontSize: '16px',

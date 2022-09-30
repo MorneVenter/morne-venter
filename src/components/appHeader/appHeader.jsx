@@ -16,7 +16,6 @@ export const AppHeader = () => {
 			<br />
 			<h2 className={css.subHeader}>hey, i make games</h2>
 			<h2 className={css.subHeader}>check it out</h2>
-			<br />
 			<h2 className={clsx(css.bounceArrow, css.subHeader)}>⥥</h2>
 		</div>
 	);
