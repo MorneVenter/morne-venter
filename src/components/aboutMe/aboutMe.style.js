@@ -44,9 +44,7 @@ export const style = createUseStyles({
 	skillRow: {
 		display: 'flex',
 		flexDirection: 'row',
-		marginBottom: '1vh',
-		marginTop: '4vh',
-		margin: '4vh auto auto auto',
+		margin: '4vh auto 5vh auto',
 		justifyContent: 'space-around',
 		width: '75%',
 		flexWrap: 'wrap',

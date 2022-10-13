@@ -33,6 +33,14 @@ export const ProjectBody = () => {
 					image={enterDigiton}
 				/>
 			</div>
+			<div className={css.projectColumn}>
+				<h1 className={css.projectHeader}>Experiments</h1>
+				<ProjectCard
+					headerText={`The Reaper's Grim`}
+					bodyText='a halloween game made in the 30 days of October (2022)'
+					image={unknown}
+				/>
+			</div>
 		</div>
 	);
 };

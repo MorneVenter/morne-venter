@@ -8,6 +8,7 @@ export const style = createUseStyles({
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'center',
+		flexWrap: 'wrap',
 		[mobileBreak]: {
 			flexDirection: 'column',
 		},

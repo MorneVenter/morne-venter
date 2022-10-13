@@ -35,7 +35,6 @@ export const AboutMe = () => {
 					</p>
 				</div>
 			</div>
-
 			<div className={css.skillRow}>
 				{shuffleArray(skills).map((skill) => (
 					<p
@@ -45,6 +44,20 @@ export const AboutMe = () => {
 						{skill}
 					</p>
 				))}
+			</div>
+			<br />
+			<div>
+				<iframe
+					title='my songs'
+					style={{ borderRadius: '12px' }}
+					src='https://open.spotify.com/embed/playlist/21GOBiCkhjCd2cEC9eDnhT?utm_source=generator&theme=0'
+					width='100%'
+					height='380'
+					frameBorder='0'
+					allowFullScreen={false}
+					allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+					loading='lazy'
+				></iframe>
 			</div>
 		</div>
 	);
