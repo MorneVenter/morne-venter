@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.4af54137.js",
+    "main.js": "/static/js/main.a253f1c7.js",
     "static/media/self.jpg": "/static/media/self.9768a3b30203b6825634.jpg",
     "static/media/enter_digiton_banner.jpg": "/static/media/enter_digiton_banner.ebb7ac6860f201c51e6d.jpg",
+    "static/media/reapers_grim_banner.png": "/static/media/reapers_grim_banner.77caa31ae9e0812a48cb.png",
     "static/media/ember_crusade_banner.jpg": "/static/media/ember_crusade_banner.e918cba8c93937484da0.jpg",
     "static/media/skullo.png": "/static/media/skullo.2a8284fe7f8b2bc5d7a9.png",
     "static/media/unknown.png": "/static/media/unknown.ebbfd655c6a1add552a2.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.4af54137.js.map": "/static/js/main.4af54137.js.map"
+    "main.a253f1c7.js.map": "/static/js/main.a253f1c7.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.4af54137.js"
+    "static/js/main.a253f1c7.js"
   ]
 }
