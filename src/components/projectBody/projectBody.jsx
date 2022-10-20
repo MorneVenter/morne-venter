@@ -4,6 +4,7 @@ import { style } from './projectBody.style';
 import emberCrusade from '../../media/ember_crusade_banner.jpg';
 import enterDigiton from '../../media/enter_digiton_banner.jpg';
 import unknown from '../../media/unknown.png';
+import reaper from '../../media/reapers_grim_banner.png';
 
 export const ProjectBody = () => {
 	const css = style();
@@ -37,8 +38,9 @@ export const ProjectBody = () => {
 				<h1 className={css.projectHeader}>Experiments</h1>
 				<ProjectCard
 					headerText={`The Reaper's Grim`}
-					bodyText='a halloween game made in the 30 days of october (2022)'
-					image={unknown}
+					bodyText='a short halloween game (2022)'
+					link={'https://morneventer.itch.io/the-reapers-grim'}
+					image={reaper}
 				/>
 			</div>
 		</div>
