@@ -32,7 +32,7 @@ export const AppHeader = () => {
 				className={css.skull}
 			/>
 			<br />
-			<h2 className={css.subHeader}>hey, i make games</h2>
+			<h2 className={css.subHeader}>hey, i make games and write code</h2>
 			<h2 className={css.subHeader}>check it out</h2>
 			<h2 className={clsx(css.bounceArrow, css.subHeader)}>⥥</h2>
 		</div>
