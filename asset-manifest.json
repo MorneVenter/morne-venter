@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.f84e3abd.js",
+    "main.js": "/static/js/main.c8d84f3d.js",
     "static/media/self.jpg": "/static/media/self.9768a3b30203b6825634.jpg",
     "static/media/enter_digiton_banner.jpg": "/static/media/enter_digiton_banner.ebb7ac6860f201c51e6d.jpg",
     "static/media/reapers_grim_banner.png": "/static/media/reapers_grim_banner.e7a24e372f4e592acc88.png",
@@ -10,10 +10,10 @@
     "static/media/unknown.png": "/static/media/unknown.ebbfd655c6a1add552a2.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.f84e3abd.js.map": "/static/js/main.f84e3abd.js.map"
+    "main.c8d84f3d.js.map": "/static/js/main.c8d84f3d.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.f84e3abd.js"
+    "static/js/main.c8d84f3d.js"
   ]
 }
