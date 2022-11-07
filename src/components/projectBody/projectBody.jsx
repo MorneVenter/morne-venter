@@ -6,6 +6,7 @@ import enterDigiton from '../../media/enter_digiton_banner.jpg';
 import unknown from '../../media/unknown.png';
 import reaper from '../../media/reapers_grim_banner.png';
 import vampire from '../../media/sea_of_vampires_banner.png';
+import doomer from '../../media/doomer_sim_banner.png';
 
 export const ProjectBody = () => {
 	const css = style();
@@ -42,12 +43,21 @@ export const ProjectBody = () => {
 					bodyText='a short halloween game (2022)'
 					link={'https://morneventer.itch.io/the-reapers-grim'}
 					image={reaper}
+					experiment={true}
 				/>
 				<ProjectCard
 					headerText={`Sea of Vampires`}
 					bodyText='entry for the october mini jam (2022)'
 					link={'https://morneventer.itch.io/sea-of-vampires'}
 					image={vampire}
+					experiment={true}
+				/>
+				<ProjectCard
+					headerText={`Doomer Life Simulator`}
+					bodyText='a 20 second jam game (2022)'
+					link={'https://morneventer.itch.io/doomer-life-simulator'}
+					image={doomer}
+					experiment={true}
 				/>
 			</div>
 		</div>
