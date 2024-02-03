@@ -7,6 +7,7 @@ import unknown from '../../media/unknown.png';
 import reaper from '../../media/reapers_grim_banner.png';
 import vampire from '../../media/sea_of_vampires_banner.png';
 import doomer from '../../media/doomer_sim_banner.png';
+import nebula from '../../media/nebula_nexus.png';
 
 export const ProjectBody = () => {
 	const css = style();
@@ -57,6 +58,13 @@ export const ProjectBody = () => {
 					bodyText='a 20 second jam game (2022)'
 					link={'https://morneventer.itch.io/doomer-life-simulator'}
 					image={doomer}
+					experiment={true}
+				/>
+				<ProjectCard
+					headerText={`Nebula Nexus`}
+					bodyText='a retro bullet hell game (2024)'
+					link={'https://morneventer.itch.io/nebula-nexus'}
+					image={nebula}
 					experiment={true}
 				/>
 			</div>
