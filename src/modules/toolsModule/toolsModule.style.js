@@ -14,8 +14,4 @@ export const style = createUseStyles({
     fontFamily: `'Oxygen', sans-serif`,
     flexDirection: 'column',
   },
-  link: {
-    color: color.text,
-    fontFamily: `'Oxygen', sans-serif`,
-  },
 });
