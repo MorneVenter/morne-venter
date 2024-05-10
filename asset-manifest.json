@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a3fde8c4.css",
-    "main.js": "/static/js/main.41684993.js",
+    "main.js": "/static/js/main.ef0df332.js",
     "static/js/504.9c7439a3.chunk.js": "/static/js/504.9c7439a3.chunk.js",
     "static/media/self.jpg": "/static/media/self.9768a3b30203b6825634.jpg",
     "static/media/enter_digiton_banner.jpg": "/static/media/enter_digiton_banner.ebb7ac6860f201c51e6d.jpg",
@@ -15,11 +15,11 @@
     "index.html": "/index.html",
     "static/media/convert.svg": "/static/media/convert.0c0c1508b2d8a78cd09f8216d79d0060.svg",
     "main.a3fde8c4.css.map": "/static/css/main.a3fde8c4.css.map",
-    "main.41684993.js.map": "/static/js/main.41684993.js.map",
+    "main.ef0df332.js.map": "/static/js/main.ef0df332.js.map",
     "504.9c7439a3.chunk.js.map": "/static/js/504.9c7439a3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3fde8c4.css",
-    "static/js/main.41684993.js"
+    "static/js/main.ef0df332.js"
   ]
 }
