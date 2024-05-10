@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, HashRouter } from 'react-router-dom';
 import { ThemeProvider } from './colors/theme';
 import { Main } from './pages/main';
 import { Tools } from './pages/tools';
@@ -8,7 +8,7 @@ import { routes } from './routes';
 export const App = () => {
   return (
     <ThemeProvider>
-      <BrowserRouter basename='/'>
+      <HashRouter basename='/'>
         <Routes>
           <Route
             path={routes.main}
@@ -25,7 +25,7 @@ export const App = () => {
             element={<NoPage />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 };

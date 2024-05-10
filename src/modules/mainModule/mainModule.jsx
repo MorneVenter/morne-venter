@@ -6,6 +6,7 @@ import { ContactDetail } from '../../components/contactDetail/contactDetail';
 import { AboutMe } from '../../components/aboutMe/aboutMe';
 import { useTheme } from '../../colors/theme';
 import { routes } from '../../routes';
+import { Link } from 'react-router-dom';
 
 export const MainModule = () => {
   const { theme } = useTheme();
@@ -13,12 +14,12 @@ export const MainModule = () => {
   const css = style({ isDarkTheme });
   return (
     <div className={css.main}>
-      <a
-        href={routes.tools}
+      <Link
+        to={routes.tools}
         className={css.link}
       >
         cool tools
-      </a>
+      </Link>
       <AppHeader
         subHeader='hey, i make games and write code'
         mainHeader='check it out'
