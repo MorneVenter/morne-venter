@@ -1,13 +1,18 @@
-import React from 'react';
-import { style } from './appHeader.style';
-import skull from '../../media/skullo.png';
 import clsx from 'clsx';
-import { useTheme } from '../../colors/theme';
+import { style } from './app-header.style';
+import { useTheme } from 'colors/Theme';
+import skull from '../../media/skullo.png';
 
-export const AppHeader = ({ mainHeader, subHeader }) => {
+type AppHeaderProps = {
+  mainHeader: string;
+  subHeader: string;
+};
+
+export const AppHeader = ({ mainHeader, subHeader }: AppHeaderProps) => {
   const css = style();
   const { theme, setDarkTheme, setLightTheme } = useTheme();
   const isDarkTheme = theme === 'dark';
+
   return (
     <div className={css.headerContainer}>
       <h1 className={css.header}>morné venter</h1>

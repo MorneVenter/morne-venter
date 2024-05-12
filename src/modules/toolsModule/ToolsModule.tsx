@@ -1,9 +1,8 @@
-import React from 'react';
-import { useTheme } from '../../colors/theme';
-import { style } from './toolsModule.style';
-import { AppHeader } from '../../components/appHeader/appHeader';
-import { WebmConverterConverter } from '../../components/webm-converter/webmConverter';
-import { ContactDetail } from '../../components/contactDetail/contactDetail';
+import { AppHeader } from 'components/appHeader/AppHeader';
+import { style } from './tools-module.style';
+import { WebmConverterConverter } from 'components/webm-converter/WebmConverter';
+import { ContactDetail } from 'components/contactDetail/ContactDetail';
+import { useTheme } from 'colors/Theme';
 
 export const ToolsModule = () => {
   const { theme } = useTheme();

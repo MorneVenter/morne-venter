@@ -1,8 +1,8 @@
-import { style } from './webmConverter.style';
 import { useEffect, useRef, useState } from 'react';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { toBlobURL, fetchFile } from '@ffmpeg/util';
 import { downloadBlob } from '../../utils/fileHandling';
+import { style } from './webm-converter.style';
 import convertIcon from '../../media/convert.svg';
 import './loader.css';
 
@@ -19,12 +19,11 @@ export const WebmConverterConverter = () => {
   const loadFfmpeg = async () => {
     setIsLoading(true);
     try {
-      const baseURL = 'https://unpkg.com/@ffmpeg/core-mt@0.12.6/dist/esm';
+      const baseURL = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm';
       const ffmpeg = ffmpegRef.current;
       await ffmpeg.load({
         coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
         wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
-        workerURL: await toBlobURL(`${baseURL}/ffmpeg-core.worker.js`, 'text/javascript'),
       });
       setIsFfmpegLoaded(true);
     } finally {
@@ -32,13 +31,14 @@ export const WebmConverterConverter = () => {
     }
   };
 
-  const onFileChange = (files) => {
+  const onFileChange = (files: FileList | null) => {
+    if (!files) return;
     const file = files.item(0);
     if (!file || file.type !== WEBM_FILE_TYPE) return;
     transcodeWebmToMp4(file);
   };
 
-  const transcodeWebmToMp4 = async (fileToConvert) => {
+  const transcodeWebmToMp4 = async (fileToConvert: File) => {
     try {
       setIsLoading(true);
       const ffmpeg = ffmpegRef.current;
@@ -46,7 +46,7 @@ export const WebmConverterConverter = () => {
       await ffmpeg.writeFile('input.webm', webmFile);
       await ffmpeg.exec(['-i', 'input.webm', 'output.mp4']);
       const mp4File = await ffmpeg.readFile('output.mp4');
-      const mp4Blob = new Blob([mp4File.buffer], { type: 'video/mp4' });
+      const mp4Blob = new Blob([mp4File], { type: 'video/mp4' });
       downloadBlob(mp4Blob);
     } finally {
       setIsLoading(false);

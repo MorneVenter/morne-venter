@@ -1,23 +1,21 @@
-import { Route, Routes, HashRouter } from 'react-router-dom';
-import { ThemeProvider } from './colors/theme';
-import { Main } from './pages/main';
-import { Tools } from './pages/tools';
-import { NoPage } from './pages/noPage';
-import { routes } from './routes';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Main } from 'pages/MainPage';
+import { CustomThemeProvider } from 'colors/Theme';
+import { Tools } from 'pages/ToolsPage';
+import { NoPage } from 'pages/NoPage';
+import { routes } from 'routes';
 
 export const App = () => {
   return (
-    <ThemeProvider>
+    <CustomThemeProvider>
       <HashRouter basename='/'>
         <Routes>
           <Route
             path={routes.main}
-            exact
             element={<Main />}
           />
           <Route
             path={routes.tools}
-            exact
             element={<Tools />}
           />
           <Route
@@ -26,6 +24,6 @@ export const App = () => {
           />
         </Routes>
       </HashRouter>
-    </ThemeProvider>
+    </CustomThemeProvider>
   );
 };

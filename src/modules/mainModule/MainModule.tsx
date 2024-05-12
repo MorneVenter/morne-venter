@@ -1,12 +1,11 @@
-import React from 'react';
-import { style } from './mainModule.style';
-import { AppHeader } from '../../components/appHeader/appHeader';
-import { ProjectBody } from '../../components/projectBody/projectBody';
-import { ContactDetail } from '../../components/contactDetail/contactDetail';
-import { AboutMe } from '../../components/aboutMe/aboutMe';
-import { useTheme } from '../../colors/theme';
 import { routes } from '../../routes';
 import { Link } from 'react-router-dom';
+import { style } from './main-module.style';
+import { AppHeader } from 'components/appHeader/AppHeader';
+import { ProjectBody } from 'components/projectBody/ProjectBody';
+import { AboutMe } from 'components/aboutMe/AboutMe';
+import { ContactDetail } from 'components/contactDetail/ContactDetail';
+import { useTheme } from 'colors/Theme';
 
 export const MainModule = () => {
   const { theme } = useTheme();

@@ -1,7 +1,7 @@
 const RANDOM_NAME_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const RANDOM_NAME_LENGTH = 18;
 
-export const downloadBlob = (blob) => {
+export const downloadBlob = (blob: Blob): void => {
   const blobUrl = window.URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = blobUrl;
@@ -12,7 +12,7 @@ export const downloadBlob = (blob) => {
   window.URL.revokeObjectURL(blobUrl);
 };
 
-const getRandomName = () => {
+const getRandomName = (): string => {
   const charactersLength = RANDOM_NAME_CHARS.length;
   let counter = 0;
   let result = '';

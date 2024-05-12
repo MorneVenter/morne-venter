@@ -1,9 +1,10 @@
 import { createUseStyles } from 'react-jss';
 import { color } from '../../colors/palette';
+import { StyleProps } from 'types/theme.type';
 
 export const style = createUseStyles({
   main: {
-    backgroundColor: (props) => (props.isDarkTheme ? color.primaryDark : color.primary),
+    backgroundColor: (props: StyleProps) => (props.isDarkTheme ? color.primaryDark : color.primary),
     minWidth: '100%',
     minHeight: '100%',
     position: 'absolute',
@@ -13,9 +14,5 @@ export const style = createUseStyles({
     color: color.text,
     fontFamily: `'Oxygen', sans-serif`,
     flexDirection: 'column',
-  },
-  link: {
-    color: color.text,
-    fontFamily: `'Oxygen', sans-serif`,
   },
 });
