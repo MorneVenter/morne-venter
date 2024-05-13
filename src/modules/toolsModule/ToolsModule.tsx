@@ -7,7 +7,7 @@ import { useTheme } from 'colors/Theme';
 export const ToolsModule = () => {
   const { theme } = useTheme();
   const isDarkTheme = theme === 'dark';
-  const css = style({ isDarkTheme });
+  const { classes: css } = style({ isDarkTheme });
   return (
     <div className={css.main}>
       <AppHeader

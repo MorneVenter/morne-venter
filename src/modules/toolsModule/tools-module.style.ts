@@ -1,10 +1,9 @@
-import { createUseStyles } from 'react-jss';
-import { color } from '../../colors/palette';
-import { StyleProps } from 'types/theme.type';
+import { color } from 'colors/palette';
+import { tss } from 'tss-react';
 
-export const style = createUseStyles({
+export const style = tss.withParams<{ isDarkTheme: boolean }>().create(({ isDarkTheme }) => ({
   main: {
-    backgroundColor: (props: StyleProps) => (props.isDarkTheme ? color.primaryDark : color.primary),
+    backgroundColor: isDarkTheme ? color.primaryDark : color.primary,
     minWidth: '100%',
     minHeight: '100%',
     position: 'absolute',
@@ -15,4 +14,4 @@ export const style = createUseStyles({
     fontFamily: `'Oxygen', sans-serif`,
     flexDirection: 'column',
   },
-});
+}));

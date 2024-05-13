@@ -1,8 +1,8 @@
-import { openUrl } from '../../utils/urlHandling';
+import { openUrl } from 'utils/urlHandling';
 import { style } from './contact-detail.style';
 
 export const ContactDetail = () => {
-  const css = style();
+  const { classes: css } = style();
   return (
     <div className={css.container}>
       <h1 className={css.header}>Contact & Links</h1>

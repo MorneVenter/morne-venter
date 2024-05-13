@@ -1,4 +1,4 @@
-import { routes } from '../../routes';
+import { routes } from 'routes';
 import { Link } from 'react-router-dom';
 import { style } from './main-module.style';
 import { AppHeader } from 'components/appHeader/AppHeader';
@@ -10,7 +10,7 @@ import { useTheme } from 'colors/Theme';
 export const MainModule = () => {
   const { theme } = useTheme();
   const isDarkTheme = theme === 'dark';
-  const css = style({ isDarkTheme });
+  const { classes: css } = style({ isDarkTheme });
   return (
     <div className={css.main}>
       <Link

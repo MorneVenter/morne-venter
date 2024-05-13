@@ -1,6 +1,5 @@
 import { style } from './project-body.style';
 import { ProjectCard } from 'components/projectCard/ProjectCard';
-
 import nebulaNexus from 'media/nebula_nexus.png';
 import doomerLife from 'media/doomer_sim_banner.png';
 import seaOfVampires from 'media/sea_of_vampires_banner.png';
@@ -10,7 +9,7 @@ import emberCrusade from 'media/ember_crusade_banner.jpg';
 import unknown from 'media/unknown.png';
 
 export const ProjectBody = () => {
-  const css = style();
+  const { classes: css } = style();
 
   return (
     <div className={css.body}>

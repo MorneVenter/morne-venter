@@ -1,8 +1,8 @@
-import { createUseStyles } from 'react-jss';
-import { largeBreak, mobileBreak } from '../../breakpoints';
-import { color } from '../../colors/palette';
+import { largeBreak, mobileBreak } from 'breakpoints';
+import { color } from 'colors/palette';
+import { tss } from 'tss-react';
 
-export const style = createUseStyles({
+export const style = tss.create({
   headerContainer: {
     width: '50%',
     minHeight: '100vh',

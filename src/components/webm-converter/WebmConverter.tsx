@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { toBlobURL, fetchFile } from '@ffmpeg/util';
-import { downloadBlob } from '../../utils/fileHandling';
+import { downloadBlob } from 'utils/fileHandling';
 import { style } from './webm-converter.style';
-import convertIcon from '../../media/convert.svg';
+import convertIcon from 'media/convert.svg';
 import './loader.css';
 
 const WEBM_FILE_TYPE = 'video/webm';
 
 export const WebmConverterConverter = () => {
-  const css = style();
+  const { classes: css } = style();
   const inputRef = useRef(null);
   const ffmpegRef = useRef(new FFmpeg());
 
@@ -31,13 +31,6 @@ export const WebmConverterConverter = () => {
     }
   };
 
-  const onFileChange = (files: FileList | null) => {
-    if (!files) return;
-    const file = files.item(0);
-    if (!file || file.type !== WEBM_FILE_TYPE) return;
-    transcodeWebmToMp4(file);
-  };
-
   const transcodeWebmToMp4 = async (fileToConvert: File) => {
     try {
       setIsLoading(true);
@@ -51,6 +44,13 @@ export const WebmConverterConverter = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const onFileChange = (files: FileList | null) => {
+    if (!files) return;
+    const file = files.item(0);
+    if (!file || file.type !== WEBM_FILE_TYPE) return;
+    transcodeWebmToMp4(file);
   };
 
   useEffect(() => {

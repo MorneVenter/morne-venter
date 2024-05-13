@@ -1,8 +1,8 @@
-import { createUseStyles } from 'react-jss';
-import { mobileBreak } from '../../breakpoints';
-import { color } from '../../colors/palette';
+import { mobileBreak } from 'breakpoints';
+import { color } from 'colors/palette';
+import { tss } from 'tss-react';
 
-export const style = createUseStyles({
+export const style = tss.create({
   container: {
     width: '700px',
     marginTop: '10vh',

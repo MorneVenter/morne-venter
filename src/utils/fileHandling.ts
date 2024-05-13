@@ -1,17 +1,6 @@
 const RANDOM_NAME_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const RANDOM_NAME_LENGTH = 18;
 
-export const downloadBlob = (blob: Blob): void => {
-  const blobUrl = window.URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = blobUrl;
-  link.setAttribute('download', `${getRandomName()}.mp4`);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  window.URL.revokeObjectURL(blobUrl);
-};
-
 const getRandomName = (): string => {
   const charactersLength = RANDOM_NAME_CHARS.length;
   let counter = 0;
@@ -21,4 +10,15 @@ const getRandomName = (): string => {
     counter += 1;
   }
   return result;
+};
+
+export const downloadBlob = (blob: Blob): void => {
+  const blobUrl = window.URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = blobUrl;
+  link.setAttribute('download', `${getRandomName()}.mp4`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(blobUrl);
 };

@@ -1,9 +1,9 @@
-import { shuffleArray } from '../../utils/arrayOperations';
+import { shuffleArray } from 'utils/arrayOperations';
 import { style } from './about-me.style';
-import self from '../../media/self.jpg';
+import self from 'media/self.jpg';
 
 export const AboutMe = () => {
-  const css = style();
+  const { classes: css } = style();
   const skills = [
     'React',
     'Angular',

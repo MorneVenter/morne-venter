@@ -1,4 +1,4 @@
-import { openUrl } from '../../utils/urlHandling';
+import { openUrl } from 'utils/urlHandling';
 import { style } from './project-card.style';
 
 type ProjectCardProps = {
@@ -10,7 +10,7 @@ type ProjectCardProps = {
 };
 
 export const ProjectCard = ({ headerText, bodyText, link, image, experiment = false }: ProjectCardProps) => {
-  const css = style();
+  const { classes: css } = style();
 
   const handleLinkClick = () => {
     if (link) openUrl(link);
