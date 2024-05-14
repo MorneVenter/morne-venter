@@ -51,6 +51,7 @@ export const AboutMe = () => {
           title='my songs'
           style={{ borderRadius: '12px' }}
           src='https://open.spotify.com/embed/playlist/21GOBiCkhjCd2cEC9eDnhT?utm_source=generator&theme=0'
+          sandbox='allow-same-origin allow-scripts allow-forms'
           width='100%'
           height='380'
           frameBorder='0'
