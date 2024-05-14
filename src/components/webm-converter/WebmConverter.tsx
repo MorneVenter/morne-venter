@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { toBlobURL, fetchFile } from '@ffmpeg/util';
+import { fetchFile } from '@ffmpeg/util';
 import { downloadBlob } from 'utils/fileHandling';
 import { style } from './webm-converter.style';
 import convertIcon from 'media/convert.svg';
 import './loader.css';
+import './glitch-button.css';
 
 const WEBM_FILE_TYPE = 'video/webm';
 
@@ -14,18 +15,24 @@ export const WebmConverterConverter = () => {
   const ffmpegRef = useRef(new FFmpeg());
 
   const [isFfmpegLoaded, setIsFfmpegLoaded] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const loadFfmpeg = async () => {
     setIsLoading(true);
     try {
-      const baseURL = 'https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm';
       const ffmpeg = ffmpegRef.current;
+      const coreJs = await fetch('/ffmpeg/ffmpeg-core.js');
+      const coreWasm = await fetch('/ffmpeg/ffmpeg-core.wasm');
+      const coreJsBlob = await coreJs.blob();
+      const coreWasmBlob = await coreWasm.blob();
       await ffmpeg.load({
-        coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
-        wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
+        coreURL: window.URL.createObjectURL(coreJsBlob),
+        wasmURL: window.URL.createObjectURL(coreWasmBlob),
       });
       setIsFfmpegLoaded(true);
+    } catch (_e) {
+      setIsError(true);
     } finally {
       setIsLoading(false);
     }
@@ -41,6 +48,8 @@ export const WebmConverterConverter = () => {
       const mp4File = await ffmpeg.readFile('output.mp4');
       const mp4Blob = new Blob([mp4File], { type: 'video/mp4' });
       downloadBlob(mp4Blob);
+    } catch (_e) {
+      setIsError(true);
     } finally {
       setIsLoading(false);
     }
@@ -53,46 +62,48 @@ export const WebmConverterConverter = () => {
     transcodeWebmToMp4(file);
   };
 
-  useEffect(() => {
-    loadFfmpeg();
-  }, []);
-
-  if (isLoading)
+  const renderContent = () => {
+    if (isError) return <p>error, please reload the page</p>;
+    if (isLoading) return <span className='loader' />;
+    if (!isFfmpegLoaded)
+      return (
+        <button
+          className='button-49'
+          onClick={loadFfmpeg}
+        >
+          load converter
+        </button>
+      );
     return (
-      <div className={css.main}>
-        <span className='loader' />
-      </div>
+      <>
+        <input
+          type='file'
+          accept='.webm'
+          ref={inputRef}
+          id='file-upload'
+          multiple={false}
+          className={css.uploadInput}
+          onChange={(e) => onFileChange(e.target.files)}
+        />
+        <label
+          htmlFor='file-upload'
+          className='custom-file-upload'
+        >
+          <img
+            src={convertIcon}
+            alt={`convert-webm-button`}
+            className={css.icon}
+          />
+        </label>
+        <p className={css.subText}>click to upload a .webm file to convert it to .mp4</p>
+      </>
     );
-
-  if (!isFfmpegLoaded)
-    return (
-      <div className={css.main}>
-        <p>error, please refresh the page</p>
-      </div>
-    );
+  };
 
   return (
     <div className={css.main}>
-      <input
-        type='file'
-        accept='.webm'
-        ref={inputRef}
-        id='file-upload'
-        multiple={false}
-        className={css.uploadInput}
-        onChange={(e) => onFileChange(e.target.files)}
-      />
-      <label
-        htmlFor='file-upload'
-        className='custom-file-upload'
-      >
-        <img
-          src={convertIcon}
-          alt={`convert-webm-button`}
-          className={css.icon}
-        />
-      </label>
-      <p className={css.subText}>click to upload a .webm file to convert it to .mp4</p>
+      <p className={css.header}>.webm to .mp4</p>
+      {renderContent()}
     </div>
   );
 };
