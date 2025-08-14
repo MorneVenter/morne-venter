@@ -2,9 +2,10 @@
 	height: 150px;
 	position: relative;
 }
+
 .loader:before,
 .loader:after {
-	content: '';
+	content: "";
 	width: 15px;
 	height: 15px;
 	display: block;
@@ -18,6 +19,7 @@
 		0 100px;
 	animation: left 1s infinite ease-in-out;
 }
+
 .loader:after {
 	animation: right 1.1s infinite ease-in-out;
 }
@@ -27,6 +29,7 @@
 	100% {
 		transform: translate(-15px);
 	}
+
 	50% {
 		transform: translate(15px);
 	}
@@ -37,6 +40,7 @@
 	100% {
 		transform: translate(15px);
 	}
+
 	50% {
 		transform: translate(-15px);
 	}

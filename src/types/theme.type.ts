@@ -1,11 +1,11 @@
 export type ThemeColorType = 'dark' | 'light';
 
 export type StyleProps = {
-  isDarkTheme: boolean;
+	isDarkTheme: boolean;
 };
 
 export type ThemeContextType = {
-  theme: ThemeColorType;
-  setDarkTheme: () => void;
-  setLightTheme: () => void;
+	theme: ThemeColorType;
+	setDarkTheme: () => void;
+	setLightTheme: () => void;
 };

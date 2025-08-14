@@ -1,4 +1,4 @@
 export const routes = {
-  main: '/',
-  tools: '/tools',
+	main: '/',
+	tools: '/tools',
 };

@@ -6,7 +6,7 @@
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"skipLibCheck": true,
-
+		"allowSyntheticDefaultImports": true,
 		/* Bundler mode */
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
@@ -14,7 +14,6 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
-
 		/* Linting */
 		"strict": true,
 		"noFallthroughCasesInSwitch": true,
@@ -30,6 +29,5 @@
 		"noImplicitReturns": true,
 		"noUncheckedIndexedAccess": true
 	},
-	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+	"include": ["src", "./vite.config.ts"]
 }
