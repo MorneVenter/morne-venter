@@ -46,7 +46,7 @@ export const WebmConverterConverter = () => {
 			await ffmpeg.writeFile('input.webm', webmFile);
 			await ffmpeg.exec(['-i', 'input.webm', 'output.mp4']);
 			const mp4File = await ffmpeg.readFile('output.mp4');
-			const mp4Blob = new Blob([mp4File], { type: 'video/mp4' });
+			const mp4Blob = new Blob([mp4File as BlobPart], { type: 'video/mp4' });
 			downloadBlob(mp4Blob);
 		} catch (_e) {
 			setIsError(true);
